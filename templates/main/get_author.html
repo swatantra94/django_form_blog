@@ -1,0 +1,10 @@
+{% extends 'main/base.html' %}
+{% block content %}
+<h2>Author Name: {{author.name}}</h2>
+<br>
+Article Written: 
+{% for article in author.article_set.all %}
+<a href="{% url 'get_article' article.id%}">{{article}}</a>,
+{% endfor %}
+
+{% endblock %}

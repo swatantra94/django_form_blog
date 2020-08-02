@@ -1,0 +1,12 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1>Title:{{article.title}}</h1>
+Written By: 
+{% for author in article.authors.all %}
+{{author}},
+{% endfor %}
+<br>
+Content:
+{{article.content}}
+{% endblock %}
